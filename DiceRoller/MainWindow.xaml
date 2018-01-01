@@ -1,0 +1,58 @@
+﻿<Window x:Class="DiceRoller.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DiceRoller"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="180">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <Label Name="Result" Grid.Row="0"/>
+        <Button Grid.Row="0" Name="btnRoll" Content="Roll" Click="btnRoll_Click"/>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="d2" Grid.Row="0" Grid.Column="0" FontSize="8"/>
+            <xctk:IntegerUpDown Name="d2" Grid.Column="1" Minimum="0" Value="0" FontSize="8"/>
+            <Label Content="d3" Grid.Row="0" Grid.Column="2" FontSize="8"/>
+            <xctk:IntegerUpDown Name="d3" Grid.Column="3" Minimum="0" Value="0" FontSize="8"/>
+            <Label Content="d4" Grid.Row="1" Grid.Column="0" FontSize="8"/>
+            <xctk:IntegerUpDown Name="d4" Grid.Row="1" Grid.Column="1" Minimum="0" Value="0" FontSize="8"/>
+            <Label Content="d6" Grid.Row="1" Grid.Column="2" FontSize="8"/>
+            <xctk:IntegerUpDown Name="d6" Grid.Row="1" Grid.Column="3" Minimum="0" Value="0" FontSize="8"/>
+            <Label Content="d8" Grid.Row="2" Grid.Column="0" FontSize="8"/>
+            <xctk:IntegerUpDown Name="d8" Grid.Row="2" Grid.Column="1" Minimum="0" Value="0" FontSize="8"/>
+            <Label Content="d10" Grid.Row="2" Grid.Column="2" FontSize="8"/>
+            <xctk:IntegerUpDown Name="d10" Grid.Row="2" Grid.Column="3" Minimum="0" Value="0" FontSize="8"/>
+            <Label Content="d12" Grid.Row="3" Grid.Column="0" FontSize="8"/>
+            <xctk:IntegerUpDown Name="d12" Grid.Row="3" Grid.Column="1" Minimum="0" Value="0" FontSize="8"/>
+            <Label Content="d20" Grid.Row="3" Grid.Column="2" FontSize="8"/>
+            <xctk:IntegerUpDown Name="d20" Grid.Row="3" Grid.Column="3" Minimum="0" Value="0" FontSize="8"/>
+            <Label Content="d100" Grid.Row="4" Grid.Column="0" FontSize="8"/>
+            <xctk:IntegerUpDown Name="d100" Grid.Row="4" Grid.Column="1" Minimum="0" Value="0" FontSize="8"/>
+            <Label Content="dx" Grid.Row="4" Grid.Column="2" FontSize="8"/>
+            <xctk:IntegerUpDown Name="dx" Grid.Row="4" Grid.Column="3" Minimum="0" Value="0" FontSize="8"/>
+            <Label Content="add" Grid.Row="5" Grid.Column="0" FontSize="8"/>
+            <xctk:IntegerUpDown Name="add" Grid.Row="5" Grid.Column="1" Minimum="0" Value="0" FontSize="8"/>
+            <Label Content="x=" Grid.Row="5" Grid.Column="2" FontSize="8"/>
+            <xctk:IntegerUpDown Name="x" Grid.Row="5" Grid.Column="3" Minimum="0" Value="0" FontSize="8"/>
+        </Grid>
+    </Grid>
+</Window>
